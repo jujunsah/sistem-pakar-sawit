@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Pakar Kelapa Sawit — macOS Developer Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-cover bg-center min-h-screen flex items-center justify-center p-3 sm:p-6 md:p-8 relative select-none antialiased text-slate-900" style="background-image: url('assets/img/background.jpg');">
+
+    <div class="absolute inset-0 bg-slate-950/15 backdrop-blur-[2px]"></div>
+
+    <div class="bg-[#f5f5f7]/85 backdrop-blur-3xl rounded-2xl shadow-[0_35px_90px_rgba(0,0,0,0.45)] w-full max-w-4xl border border-white/40 animate-fade-in relative z-10 overflow-hidden flex flex-col min-h-[580px]">
+        
+        <div class="flex items-center h-12 px-5 border-b border-black/[0.06] bg-white/40 relative flex-shrink-0">
+            <div class="flex space-x-2 absolute left-5">
+                <div class="w-3 h-3 rounded-full bg-[#ff5f56] border border-[#e0443e]"></div>
+                <div class="w-3 h-3 rounded-full bg-[#ffbd2e] border border-[#dea123]"></div>
+                <div class="w-3 h-3 rounded-full bg-[#27c93f] border border-[#1aab29]"></div>
+            </div>
+            <div class="w-full text-center text-[12px] font-semibold text-slate-500 tracking-wide font-apple-system">SistemPakar—Sawit.app — Workspace</div>
+        </div>
+
+        <div class="flex flex-col md:flex-row flex-grow overflow-hidden">
+            
+            <div class="w-full md:w-[280px] bg-white/20 p-6 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-black/[0.05] text-center flex-shrink-0">
+                <div class="relative group mb-4">
+                    <div class="absolute -inset-2 bg-gradient-to-r pointer-events-none from-emerald-500 to-teal-500 rounded-full blur opacity-25 group-hover:opacity-40 transition duration-700 logo-glow-container"></div>
+                    <img src="assets/img/logo.png" alt="Logo Sawit" class="relative h-20 w-20 object-cover rounded-full shadow-md border-4 border-white z-10">
+                </div>
+                
+                <h2 class="text-lg font-bold text-slate-900 tracking-tight font-apple-system mb-1">Expert System</h2>
+                <p class="text-[12px] font-semibold text-emerald-800 tracking-wider uppercase mb-6 bg-emerald-500/10 px-2 py-0.5 rounded-md border border-emerald-500/20 font-mono-unix">v1.0.0-stable</p>
+                
+                <div class="w-full space-y-2 text-left bg-black/[0.03] p-3 rounded-xl border border-black/[0.02]">
+                    <div class="flex justify-between items-center text-[11px]">
+                        <span class="font-medium text-slate-500 font-apple-system">ENGINE:</span>
+                        <span class="font-bold text-slate-700 font-mono-unix">FORWARD_CHAINING</span>
+                    </div>
+                    <div class="flex justify-between items-center text-[11px]">
+                        <span class="font-medium text-slate-500 font-apple-system">RULESET:</span>
+                        <span class="font-bold text-slate-700 font-mono-unix">SAWIT_CRITICAL_3</span>
+                    </div>
+                    <div class="flex justify-between items-center text-[11px]">
+                        <span class="font-medium text-slate-500 font-apple-system">ENVIRONMENT:</span>
+                        <span class="font-bold text-blue-700 font-mono-unix">LOCAL_DEV</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-grow p-6 md:p-8 flex flex-col justify-between overflow-y-auto">
+                <div>
+                    <div class="mb-6">
+                        <h1 class="text-2xl font-extrabold text-slate-900 tracking-tight font-apple-system mb-1">Diagnosis Penyakit</h1>
+                        <p class="text-[13px] text-slate-500 font-medium font-apple-system">Tandai seluruh gejala fisik yang teramati pada sampel pohon kelapa sawit.</p>
+                    </div>
+
+                    <form action="backend.php" method="POST" class="space-y-3">
+                        <div class="space-y-2 max-h-[300px] overflow-y-auto pr-1 custom-scrollbar">
+                            
+                            <label class="flex items-center p-3 border border-black/[0.04] rounded-xl cursor-pointer transition-all duration-200 bg-white/50 shadow-[0_1px_3px_rgba(0,0,0,0.01)] hover:bg-white/90">
+                                <input type="checkbox" name="gejala[]" value="G01" class="custom-checkbox h-[16px] w-[16px] text-emerald-600 rounded border-slate-300 bg-white focus:ring-emerald-500 focus:ring-offset-0 transition-all duration-200">
+                                <span class="ml-4 text-[13px] text-slate-800 font-semibold tracking-wide font-apple-system">
+                                    <strong class="text-emerald-700 font-bold px-1.5 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/10 font-mono-unix mr-1 text-[11px]">G01</strong> Daun tombak (pucuk) tidak membuka
+                                </span>
+                            </label>
+
+                            <label class="flex items-center p-3 border border-black/[0.04] rounded-xl cursor-pointer transition-all duration-200 bg-white/50 shadow-[0_1px_3px_rgba(0,0,0,0.01)] hover:bg-white/90">
+                                <input type="checkbox" name="gejala[]" value="G02" class="custom-checkbox h-[16px] w-[16px] text-emerald-600 rounded border-slate-300 bg-white focus:ring-emerald-500 focus:ring-offset-0 transition-all duration-200">
+                                <span class="ml-4 text-[13px] text-slate-800 font-semibold tracking-wide font-apple-system">
+                                    <strong class="text-emerald-700 font-bold px-1.5 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/10 font-mono-unix mr-1 text-[11px]">G02</strong> Daun menguning & mengering dari pelepah bawah
+                                </span>
+                            </label>
+
+                            <label class="flex items-center p-3 border border-black/[0.04] rounded-xl cursor-pointer transition-all duration-200 bg-white/50 shadow-[0_1px_3px_rgba(0,0,0,0.01)] hover:bg-white/90">
+                                <input type="checkbox" name="gejala[]" value="G03" class="custom-checkbox h-[16px] w-[16px] text-emerald-600 rounded border-slate-300 bg-white focus:ring-emerald-500 focus:ring-offset-0 transition-all duration-200">
+                                <span class="ml-4 text-[13px] text-slate-800 font-semibold tracking-wide font-apple-system">
+                                    <strong class="text-emerald-700 font-bold px-1.5 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/10 font-mono-unix mr-1 text-[11px]">G03</strong> Terdapat badan buah jamur pada pangkal batang
+                                </span>
+                            </label>
+
+                            <label class="flex items-center p-3 border border-black/[0.04] rounded-xl cursor-pointer transition-all duration-200 bg-white/50 shadow-[0_1px_3px_rgba(0,0,0,0.01)] hover:bg-white/90">
+                                <input type="checkbox" name="gejala[]" value="G04" class="custom-checkbox h-[16px] w-[16px] text-emerald-600 rounded border-slate-300 bg-white focus:ring-emerald-500 focus:ring-offset-0 transition-all duration-200">
+                                <span class="ml-4 text-[13px] text-slate-800 font-semibold tracking-wide font-apple-system">
+                                    <strong class="text-emerald-700 font-bold px-1.5 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/10 font-mono-unix mr-1 text-[11px]">G04</strong> Pangkal batang membusuk dan berlubang
+                                </span>
+                            </label>
+
+                            <label class="flex items-center p-3 border border-black/[0.04] rounded-xl cursor-pointer transition-all duration-200 bg-white/50 shadow-[0_1px_3px_rgba(0,0,0,0.01)] hover:bg-white/90">
+                                <input type="checkbox" name="gejala[]" value="G05" class="custom-checkbox h-[16px] w-[16px] text-emerald-600 rounded border-slate-300 bg-white focus:ring-emerald-500 focus:ring-offset-0 transition-all duration-200">
+                                <span class="ml-4 text-[13px] text-slate-800 font-semibold tracking-wide font-apple-system">
+                                    <strong class="text-emerald-700 font-bold px-1.5 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/10 font-mono-unix mr-1 text-[11px]">G05</strong> Bercak coklat pada daun muda
+                                </span>
+                            </label>
+
+                            <label class="flex items-center p-3 border border-black/[0.04] rounded-xl cursor-pointer transition-all duration-200 bg-white/50 shadow-[0_1px_3px_rgba(0,0,0,0.01)] hover:bg-white/90">
+                                <input type="checkbox" name="gejala[]" value="G06" class="custom-checkbox h-[16px] w-[16px] text-emerald-600 rounded border-slate-300 bg-white focus:ring-emerald-500 focus:ring-offset-0 transition-all duration-200">
+                                <span class="ml-4 text-[13px] text-slate-800 font-semibold tracking-wide font-apple-system">
+                                    <strong class="text-emerald-700 font-bold px-1.5 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/10 font-mono-unix mr-1 text-[11px]">G06</strong> Daun berlubang dan mengerut
+                                </span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="w-full bg-[#0071e3] hover:bg-[#0077ed] text-white text-[14px] font-bold py-3 px-4 rounded-xl shadow-sm transition-all duration-200 active:scale-[0.99] active:brightness-95 font-apple-system mt-4">
+                            Jalankan Mesin Inferensi
+                        </button>
+                        
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
